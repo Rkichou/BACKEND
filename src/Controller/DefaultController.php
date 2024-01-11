@@ -14,6 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
+    //jai utilisais les twig pour tester la base de Donnes 
     #[Route('/', name: 'app_acceuil')]
     public function acceuil(): Response
     {
