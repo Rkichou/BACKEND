@@ -1,3 +1,0 @@
-<?php //route_name_8344b5617ecfc67a8becc0e5def06382
-
-return [PHP_INT_MAX, 'api_clubs_get_item'];
