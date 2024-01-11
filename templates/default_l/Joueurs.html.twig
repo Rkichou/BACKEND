@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <div >
+        <section >
+            <div >
+                <h1 style="color: #261c3e;font-family: 'Bitstream Charter', sans-serif;">Nos Joueurs</h1>
+                <p>Nous sommes fiers de présenter notre équipe de joueurs de football talentueux. Nos joueurs sont des athlètes passionnés et dévoués qui ont travaillé dur pour perfectionner leurs compétences sur le terrain.</p>
+                <p>Nous avons une équipe de joueurs expérimentés et émergents, chacun apportant sa propre expertise et son style de jeu unique. Nous sommes convaincus que nos joueurs sont parmi les meilleurs et qu'ils sont prêts à relever tous les défis qui se présentent à eux sur le terrain. Découvrez nos joueurs et apprenez à connaître leur histoire, leur parcours et leur passion pour le football</p>
+            </div>
+        </section>
+
+        <div class="photo-grid">
+            {% for joueur in Joueurs %}
+                <a href="{{ path('app_un_Joueur',{id:joueur.id}) }}" class="photo-card">
+                    <img src="{{ joueur.photo }}" alt="Photo de {{ joueur.nom }} {{ joueur.prenom }}">
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

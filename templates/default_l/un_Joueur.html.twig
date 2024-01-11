@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Main -->
+    <section id="main" class="wrapper style1 exotic">
+        <div class="inner">
+            {% if un_joueur is not empty %}
+                <div class="player-container">
+                    <div class="player-details">
+                        <h1>{{ un_joueur.nom }} {{ un_joueur.prenom }}</h1>
+                        <p>Nationalité : {{ un_joueur.nationalite }}</p>
+                        <p>Né le {{ un_joueur.getDateDeNaissance|date('d/m/Y') }}</p>
+                        <p>Club Actuel : {{ un_joueur.getClubActuel() }}</p>
+                        <p>Poste : {{ un_joueur.poste }}</p>
+                        <p>{{ un_joueur.getDescription() }}</p>
+                        <p>Agent de Joueur : <a href="{{ path('app_un_Agent',{id:un_joueur.agent.id}) }}">Lien vers l'agent</a></p>
+                        <a href="https://www.footmercato.net/joueur/{{ un_joueur.nom }}-{{ un_joueur.prenom }}/statistique">Statistique du joueur</a>
+                    </div>
+                    <div class="player-photo">
+                        <img src="{{ asset(un_joueur.photo) }}" alt="Photo de {{ un_joueur.nom }} {{ un_joueur.prenom }}">
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,268 @@
+/* Styles généraux */
+#intro {
+    position: relative;
+}
+
+#intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/PA.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-bottom: 500px;
+    z-index: -1;
+    opacity: 0.5; /* Ajustez l'opacité selon vos préférences */
+    transition: opacity 0.5s ease; /* Ajoutez une transition en fondu */
+}
+
+#intro:hover::before {
+    opacity: 1; /* Au survol, augmentez l'opacité pour révéler complètement l'image */
+}
+
+.logo {
+    float: right;
+    width: 150px; /* Ajustez la largeur selon vos besoins */
+    height: 150px; /* Ajustez la hauteur selon vos besoins */
+    margin-top: 0px; /* Ajustez la marge supérieure selon vos besoins */
+    margin-left: 800px; /* Ajustez la marge gauche selon vos besoins */
+    font-family: cursive, sans-serif;
+}
+.div-B{
+    background-image: url('/images/PA.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-bottom: 500px;
+
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.btn-app{}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styles du header *//* Header */
+header {
+    background-color: #261c3e;
+    padding: 20px;
+    color: #fff;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+
+    display: inline-block;
+    margin-right: 20px;
+    padding-top: 0px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+
+}
+
+header nav ul li a:hover {
+    color: #ffd700;
+
+}
+
+
+
+/* Styles du body */
+section {
+    padding: 20px;
+}
+h2 {
+    font-size: 24px;
+    color: #261c3e;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Styles du footer */#footer {
+                          display: flex;
+                          justify-content: space-between;
+                          align-items: center;
+                          background-color: #f2f2f2;
+                          padding: 20px;
+                      }
+
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-section:last-child {
+    margin-right: 0;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 5px;
+}
+
+.footer-section a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-section p {
+    font-size: 14px;
+    color: #888888;
+    margin: 0;
+}
+
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 24px;
+    }
+}
+
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.photo-card {
+    width: calc(33.33% - 20px);
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.photo-card:hover {
+    transform: scale(1.1);
+}
+
+.photo-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.player-container {
+    display: flex;
+    gap: 20px;
+}
+
+.player-details {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.player-details h1 {
+    font-size: 24px;
+    color: #261c3e;
+    margin-bottom: 10px;
+}
+
+.player-details p {
+    margin-bottom: 10px;
+}
+
+.player-details a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #261c3e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.player-details a:hover {
+    text-decoration: underline;
+}
+
+.player-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    flex: 1;
+}
+.offer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.offer-card {
+    width: 30%;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.offer-player img {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.offer-clubs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.offer-clubs img {
+    width: 45%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.offer-details p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.offer-details p:first-child {
+    font-weight: bold;
+}
+
+.offer-details p:not(:first-child) {
+    margin-bottom: 5px;
+}

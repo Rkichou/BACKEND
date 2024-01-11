@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}KScouting {% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/card.css') }}">
+
+
+
+
+        {% endblock %}
+
+        {% block javascripts %}
+        <script>new fullpage('#fullpage', {
+                autoScrolling: true,
+                navigation: true,
+            });
+        </script>
+
+        {% endblock %}
+    </head>
+    {% block header %}
+
+        <header id="header">      <div >
+            <nav>
+                <ul>
+                    <li ><a href="/">Accueil</a></li>
+                    <li><a href="/#a-propos" >A propos</a></li>
+                    <li><a href="{{ path('app_Joueurs') }}"> Joueurs</a></li>
+                    <li><a href="{{ path('app_Agents') }}"> Agents</a></li>
+                    <li><a href="{{ path('app_Clubs') }}">Club</a></li>
+                    <li><a href="{{ path('app_Offres') }}">Offre</a></li>
+                    <li><a href="{{ path('app_contact_nous') }}">Nous Contacter</a></li>
+                    <H1 class="logo">K-Scouting</H1>
+                    <!--<li><img src="{{ asset('images/K-Scouting.jpeg') }}" alt="Logo" class="logo"></li>!-->
+                </ul>
+               
+            </nav>
+
+        </div>
+        </header>
+    {% endblock %}
+
+
+        {% block body %}{% endblock %}
+        <!-- Footer -->
+    {% block footer %}
+
+
+
+        <!-- <footer id="footer" >
+             <div class="footer-section">
+                 <ul >
+                     <section>
+                         <ul>
+                             <li>
+                                 <h3>Adresse</h3>
+                                 <span>29 rue de La Huguenotte<br />
+                                             17000 La Rochelle<br />
+                                             France</span>
+                             </li>
+                             <li>
+                                 <h3>Email</h3>
+                                 <a href="#">KScouting@outlook.fr</a>
+                             </li>
+                             <li>
+                                 <h3>Téléphone</h3>
+                                 <span>06 63 23 85 52</span>
+                             </li>
+                             <li>
+                                 <h3>Réseaux sociaux</h3>
+                                 <ul class="icons">
+                                     <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                     <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                     <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                                     <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                     <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                                 </ul>
+                             </li>
+                             <section>
+                                 <p> Tous droits réservés © 2023 - Scouting de football</p>
+                             </section>
+                         </ul>
+                     </section>
+                 </ul>
+             </div>
+         </footer>-->
+        <footer id="footer">
+            <div class="footer-section">
+                <h3>Adresse</h3>
+                <span>29 rue de La Huguenotte<br />
+											17000 La Rochelle<br />
+											France</span>
+                <h3>Email</h3>
+                <a href="#">KScouting@outlook.fr</a>
+                <!-- Première partie du footer -->
+            </div>
+            <div class="footer-section">
+                <h3>Téléphone</h3>
+                <span>06 63 23 85 52</span>
+                <!-- Deuxième partie du footer -->
+            </div>
+            <div class="footer-section">
+                <ul>
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                </ul>
+                <!-- Troisième partie du footer -->
+            </div>
+        </footer>
+    {% endblock %}
+    </body>
+</html>

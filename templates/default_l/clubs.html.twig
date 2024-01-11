@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <section id="intro">
+        <ul>   <div class="inner">
+                <li>  <h1 style="color: #261c3e;font-family: 'Bitstream Charter', sans-serif;">Club En Partenariat </h1>
+                    <p >Nous sommes ravis de vous présenter notre sélection de clubs partenaires, avec qui nous partageons des valeurs communes dans le monde du football. Chez KScouting , nous sommes passionnés par le développement des talents de demain et nous croyons fermement que nos partenariats avec ces clubs prestigieux nous permettent de réaliser cette ambition.</p>
+                    <p> Nous sommes engagés à travailler en étroite collaboration avec ces professionnels pour offrir les meilleures opportunités à nos joueurs et pour contribuer à la croissance du football à travers le monde. Découvrez ci-dessous notre liste de clubs partenaires et les avantages de travailler avec eux.</p>
+                </li>
+            </div> </ul>
+    </section>
+
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Logo</th>
+            <th>Nom</th>
+            <th>Pays</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for club in clubs %}
+            <tr>
+                <td><img src="{{ club.logo }}" alt="Photo de Bilel Brahimi"></td>
+                <td>{{ club.nom }}</td>
+                <td>{{ club.Pays }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+

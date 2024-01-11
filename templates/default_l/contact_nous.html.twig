@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Contact -->
+        <section id="three" class="wrapper style1 fade-up">
+            <div class="inner">
+                <h2>Contactez-nous !</h2>
+                <p>N'hésitez pas à nous contacter si vous avez des questions ou si vous êtes intéressé à travailler avec nous. Vous pouvez nous envoyer un message en utilisant le formulaire de contact ci-dessous, ou en nous envoyant un e-mail directement à l'adresse contact@entreprise-scouting-football.com . Nous ferons de notre mieux pour vous répondre dans les plus brefs délais."</p>
+                <div class="split style1">
+                    <section>
+                        {{ form_start(form) }}
+                        {{ form_widget(form) }}
+                        <button type="submit">Envoyez</button>
+                        {{ form_end(form) }}
+                    </section>
+                    <section>
+                        <ul class="contact">
+                            <li>
+                                <h3>Adresse</h3>
+                                <span>29 rue de la Huguenotte <br />
+											17000 La Rochelle<br />
+											France</span>
+                            </li>
+                            <li>
+                                <h3>Email</h3>
+                                <a href="#">KScouting@outlook.fr</a>
+                            </li>
+                            <li>
+                                <h3>Téléphone</h3>
+                                <span>06 63 23 85 52</span>
+                            </li>
+                            <li>
+                                <h3>Réseaux sociaux</h3>
+                                <ul class="icons">
+                                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                    <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                    <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <footer id="footer" class="wrapper style1-alt">
+        <div class="inner">
+            <ul class="main">
+                <section>
+    <p> Tous droits réservés © 2023 - Scouting de football</p>
+    </section>
+
+            </ul>  </div>
+{% endblock %}

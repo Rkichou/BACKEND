@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div >
+        <section>
+            <div >
+                <h1 style="color: #261c3e;font-family: 'Bitstream Charter', sans-serif;">Nos Joueurs</h1>
+                <p>Nous sommes fiers de présenter notre équipe de joueurs de football talentueux. Nos joueurs sont des athlètes passionnés et dévoués qui ont travaillé dur pour perfectionner leurs compétences sur le terrain.</p>
+                <p>Nous avons une équipe de joueurs expérimentés et émergents, chacun apportant sa propre expertise et son style de jeu unique. Nous sommes convaincus que nos joueurs sont parmi les meilleurs et qu'ils sont prêts à relever tous les défis qui se présentent à eux sur le terrain. Découvrez nos joueurs et apprenez à connaître leur histoire, leur parcours et leur passion pour le football</p>
+            </div>
+        </section>
+
+        <div class="offer-grid">
+            {% for offre in Offres %}
+                <div class="offer-card">
+                    <div class="offer-player">
+                        <img src="{{ offre.joueur.photo }}" alt="Photo de {{ offre.joueur.nom }} {{ offre.joueur.prenom }}">
+                    </div>
+                    <div class="offer-details">
+                        <p>Offre de transfert :</p>
+                        <p>{{ offre.joueur.getClubActuel() }}  -> {{ offre.club }} </p>
+                        <p>Montant de l'offre : {{ offre.montant }} €</p>
+                        <p>Date de l'offre : {{ offre.joueur.nom }} </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

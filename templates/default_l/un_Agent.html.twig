@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Main -->
+    <section id="main">
+
+        <ul class="inner">
+
+            {% if un_Agent is not  empty %}
+                <ul>
+                    <img src="{{ asset( un_Agent.photo ) }}" alt="Photo de {{ un_Agent.nom }} {{ un_Agent.prenom }} ">
+                    <h1>{{ un_Agent.nom }} {{ un_Agent.prenom }}</h1>
+                    <p>Email : {{ un_Agent.email }}</p>
+
+                </ul>
+
+            {% endif %}
+        </ul>
+    </section>
+{% endblock %}
+
+
+
