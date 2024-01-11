@@ -1,0 +1,3 @@
+<?php //route_name_b80701e73565cb79bb61c00c31d28cae
+
+return [PHP_INT_MAX, 'api_agents_get_item'];
